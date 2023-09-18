@@ -1,7 +1,7 @@
-## Ejercicio con el módulo struct
-Implementar un script servidor y un script cliente que hagan lo siguiente (con sockets UDP):
+## The struct module
+Implement a server script and a client script that do the following (with UDP sockets):
 
-- Cliente: enviar un mensaje al servidor compuesto por un entero de 16 bits y un string aleatorio. El entero indica la longitud del string.
-- Servidor: recibir el mensaje del cliente, decodificarlo y mostrarlo por pantalla.
+- Client: send a message to the server consisting of a 16-bit integer and a random string. The integer indicates the length of the string.
+- Server: receive the message from the client, decode it, and display it on the screen.
 
-Ten en cuenta que la longitud del string es variable, por lo que el servidor debe decodificar el mensaje de forma dinámica.
+Keep in mind that the length of the string is variable, so the server must decode the message dynamically.

@@ -1,14 +1,14 @@
-## Ejercicio básico de sockets
-Implementar un script servidor y un script cliente que hagan lo siguiente (con sockets UDP):
+## Basic Sockets
+Implement a server script and a client script that do the following (with UDP sockets):
 
-1. El servidor debe ponerse a la escucha en un puerto accesible.
-2. El cliente debe enviar un mensaje al servidor.
-3. El servidor debe decodificar el mensaje y mostrarlo por pantalla.
+1. The server must listen on an accessible port.
+2. The client must send a message to the server.
+3. The server must decode the message and display it on the screen.
 
-A tener en cuenta:
+Things to consider:
 
-- El mensaje del cliente debe ir codificado en utf-8.
-- El servidor debe decodificar el mensaje en ascii.
-- Por la diferencia de encodings, el servidor debe manejar de alguna forma los errores de decodificación.
+- The client's message must be encoded in utf-8.
+- The server must decode the message in ascii.
+- Due to the difference in encodings, the server must somehow handle decoding errors.
 
-Prueba a 1) enviar desde el cliente la cadena "ñandú" para ver los errores de decodificación y a 2) ejecutar el ejercicio con otra persona (cada uno ejecutáis un script, el cliente o el servidor).
+Try to 1) test by sending the string "ñandú" from the client to see the decoding errors, and 2) run the exercise with another person (each of you runs one script, either the client or the server).
