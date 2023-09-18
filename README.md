@@ -1,2 +1,2 @@
-# exercises
-Distributed Systems subject exercises
+# Exercises
+Distributed Systems exercises
