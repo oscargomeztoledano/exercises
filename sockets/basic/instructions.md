@@ -10,3 +10,5 @@ A tener en cuenta:
 - El mensaje del cliente debe ir codificado en utf-8.
 - El servidor debe decodificar el mensaje en ascii.
 - Por la diferencia de encodings, el servidor debe manejar de alguna forma los errores de decodificación.
+
+Prueba a 1) enviar desde el cliente la cadena "ñandú" para ver los errores de decodificación y a 2) ejecutar el ejercicio con otra persona (cada uno ejecutáis un script, el cliente o el servidor).
