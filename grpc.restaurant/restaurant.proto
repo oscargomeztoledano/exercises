@@ -1,0 +1,36 @@
+syntax="proto3";
+
+package servicio;
+
+service servicio{
+  rpc reservar (ReservationRequest) returns (Response) {}
+  rpc comprobar (Request) returns (Response) {}
+  rpc cancelar (Request) returns (Response) {}
+  rpc listar (ListRequest) returns (Response) {}
+}
+
+message ReservationRequest{
+    string message=1;
+    Reservation reservation=2;
+}
+
+message Response{
+    string mensaje= 1;
+  
+}
+
+message Reservation{
+  string date=1;
+  string time=2;
+  int32 number_of_diners=3;
+  string client_name=4;
+  string phone=5;
+}
+
+message ListRequest{}
+
+message Request{
+  string message =1;
+  string fecha=2;
+}
+
