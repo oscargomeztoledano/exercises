@@ -15,7 +15,7 @@ message ReservationRequest{
 }
 
 message Response{
-    string mensaje= 1;
+     string mensaje= 1;
   
 }
 
@@ -30,7 +30,6 @@ message Reservation{
 message ListRequest{}
 
 message Request{
-  string message =1;
   string fecha=2;
 }
 

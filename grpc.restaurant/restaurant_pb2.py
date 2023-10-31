@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x10restaurant.proto\x12\x08servicio\"Q\n\x12ReservationRequest\x12\x0f\n\x07message\x18\x01 \x01(\t\x12*\n\x0breservation\x18\x02 \x01(\x0b\x32\x15.servicio.Reservation\"\x1b\n\x08Response\x12\x0f\n\x07mensaje\x18\x01 \x01(\t\"g\n\x0bReservation\x12\x0c\n\x04\x64\x61te\x18\x01 \x01(\t\x12\x0c\n\x04time\x18\x02 \x01(\t\x12\x18\n\x10number_of_diners\x18\x03 \x01(\x05\x12\x13\n\x0b\x63lient_name\x18\x04 \x01(\t\x12\r\n\x05phone\x18\x05 \x01(\t\"\r\n\x0bListRequest\")\n\x07Request\x12\x0f\n\x07message\x18\x01 \x01(\t\x12\r\n\x05\x66\x65\x63ha\x18\x02 \x01(\t2\xec\x01\n\x08servicio\x12>\n\x08reservar\x12\x1c.servicio.ReservationRequest\x1a\x12.servicio.Response\"\x00\x12\x34\n\tcomprobar\x12\x11.servicio.Request\x1a\x12.servicio.Response\"\x00\x12\x33\n\x08\x63\x61ncelar\x12\x11.servicio.Request\x1a\x12.servicio.Response\"\x00\x12\x35\n\x06listar\x12\x15.servicio.ListRequest\x1a\x12.servicio.Response\"\x00\x62\x06proto3'
+  serialized_pb=b'\n\x10restaurant.proto\x12\x08servicio\"Q\n\x12ReservationRequest\x12\x0f\n\x07message\x18\x01 \x01(\t\x12*\n\x0breservation\x18\x02 \x01(\x0b\x32\x15.servicio.Reservation\"\x1b\n\x08Response\x12\x0f\n\x07mensaje\x18\x01 \x01(\t\"g\n\x0bReservation\x12\x0c\n\x04\x64\x61te\x18\x01 \x01(\t\x12\x0c\n\x04time\x18\x02 \x01(\t\x12\x18\n\x10number_of_diners\x18\x03 \x01(\x05\x12\x13\n\x0b\x63lient_name\x18\x04 \x01(\t\x12\r\n\x05phone\x18\x05 \x01(\t\"\r\n\x0bListRequest\"\x18\n\x07Request\x12\r\n\x05\x66\x65\x63ha\x18\x02 \x01(\t2\xec\x01\n\x08servicio\x12>\n\x08reservar\x12\x1c.servicio.ReservationRequest\x1a\x12.servicio.Response\"\x00\x12\x34\n\tcomprobar\x12\x11.servicio.Request\x1a\x12.servicio.Response\"\x00\x12\x33\n\x08\x63\x61ncelar\x12\x11.servicio.Request\x1a\x12.servicio.Response\"\x00\x12\x35\n\x06listar\x12\x15.servicio.ListRequest\x1a\x12.servicio.Response\"\x00\x62\x06proto3'
 )
 
 
@@ -190,14 +190,7 @@ _REQUEST = _descriptor.Descriptor(
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='message', full_name='servicio.Request.message', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='fecha', full_name='servicio.Request.fecha', index=1,
+      name='fecha', full_name='servicio.Request.fecha', index=0,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -216,7 +209,7 @@ _REQUEST = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=262,
-  serialized_end=303,
+  serialized_end=286,
 )
 
 _RESERVATIONREQUEST.fields_by_name['reservation'].message_type = _RESERVATION
@@ -271,8 +264,8 @@ _SERVICIO = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=306,
-  serialized_end=542,
+  serialized_start=289,
+  serialized_end=525,
   methods=[
   _descriptor.MethodDescriptor(
     name='reservar',
