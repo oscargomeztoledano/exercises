@@ -7,16 +7,16 @@ The publisher should send messages with the name of the videogame and the discou
 videogames/deals/<type>/<developer>
 ```
 
-The subscriber should subscribe to topics according to the user's interests, which will be specified via command line. For example, if the user is interested in action videogames from the developer Ubisoft:
-
-```
-subscriber.py -d ubisoft -t action
-```
-
-And if they are also interested in action videogames from the developer Ubisoft and from developer Rockstar:
+The subscriber should subscribe to topics according to the user's interests, which will be specified via command line. For example, if the user is interested in action videogames from the developers Ubisoft and Rockstar::
 
 ```
 subscriber.py -d ubisoft rockstar -t action
+```
+
+And if they are interested in any type of videogame from the developer Valve:
+
+```
+subscriber.py -d valve
 ```
 
 For all messages of interest, a text will be published on the terminal, printing a special text in case the discount is greater than 70%.
