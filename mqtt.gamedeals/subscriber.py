@@ -5,29 +5,26 @@ import json
 import argparse
 
 
-def print_hot_deal(deal_info):
+def print_hot_deal(deal):
     print(f'[!] HOT DEAL\n'
-        + f'\t{deal_info["name"]} by {deal_info["developer"]} ({deal_info["type"]})\n'
-        + f'\tOn sale with a {deal_info["discount"]}% discount\n\n')
+        + f'\t{deal["name"]} by {deal["developer"]} ({deal["type"]})\n'
+        + f'\tOn sale with a {deal["discount"]}% discount\n\n')
 
 
-def print_deal(deal_info):
-    print(f'[ ] New deal!\n'
-        + f'\t{deal_info["name"]} by {deal_info["developer"]} ({deal_info["type"]})\n'
-        + f'\tOn sale with a {deal_info["discount"]}% discount\n\n')
+def print_deal(deal):
+    print(f'[ ] New deal\n'
+        + f'\t{deal["name"]} by {deal["developer"]} ({deal["type"]})\n'
+        + f'\tOn sale with a {deal["discount"]}% discount\n\n')
 
 
 def on_message(client, userdata, msg):
     topics = msg.topic.split('/')
 
-    deal_info = json.loads(msg.payload)
-    deal_info['developer'] = topics[3]
-    deal_info['type'] = topics[2]
+    deal = json.loads(msg.payload)
+    deal['developer'] = topics[3]
+    deal['type'] = topics[2]
 
-    if deal_info['discount'] >= 50:
-        print_hot_deal(deal_info)
-    else:
-        print_deal(deal_info)
+    print_deal(deal) if deal['discount'] < 50 else print_hot_deal(deal)
 
 
 parser = argparse.ArgumentParser(
@@ -44,7 +41,7 @@ parser.add_argument(
     '-t', '--type',
     nargs='+',
     default=['+'],  # all types of videogames
-    help='Specify type of videogame.',
+    help='Specify type(s) of videogames of interest.',
     required=False)
 
 args = parser.parse_args()
